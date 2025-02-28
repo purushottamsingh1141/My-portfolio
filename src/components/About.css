@@ -1,0 +1,134 @@
+.about {
+  background-color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.skills {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.skills-list {
+  text-align: left;
+  flex: 1 1 45%;
+}
+
+.skills-list h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.progress-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+.progress-bar-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+progress {
+  width: 80%;
+  height: 35px;
+  appearance: none;
+  border-radius: 10px;
+}
+progress::-webkit-progress-bar {
+  background-color: #ffffff; /* Light background color */
+  border-radius: 10px; /* Optional: For rounded corners */
+}
+progress::-webkit-progress-value {
+  background-color: #4c65af; /* Green color for the filled part */
+  border-radius: 10px; /* Optional: For rounded corners */
+}
+
+
+span {
+  font-size: 1rem;
+  color: #444;
+}
+
+.professional-skills {
+  flex: 1 1 45%;
+  margin-top: 40px;
+}
+
+.professional-skills h3 {
+  font-size: 2rem;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+
+.circle-skill {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+}
+
+.circle-skills1 {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-bottom: 50px;
+}
+
+
+
+.circle-skill label {
+  font-size: 1rem;
+  color: #444;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .about h2 {
+    font-size: 2rem;
+  }
+
+  .about p {
+    font-size: 1rem;
+  }
+
+  .skills-list {
+    max-width: 500px;
+    margin-bottom: 40px;
+  }
+
+  .progress-bars {
+    gap: 10px;
+  }
+
+  .circle-skills {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .circle-skill {
+    width: 100px;
+    height: 100px;
+  }
+}
