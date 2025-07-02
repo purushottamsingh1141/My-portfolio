@@ -1,134 +1,156 @@
-.about {
-  background-color: #ffffff;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.about h2 {
-  font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-.about p {
-  font-size: 1.2rem;
-  color: #555;
-  max-width: 800px;
-  margin: 0 auto 40px;
-}
-
-.skills {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 40px;
-  align-items: flex-start;
-}
-
-.skills-list {
-  text-align: left;
-  flex: 1 1 45%;
-}
-
-.skills-list h3 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.progress-bars {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin-top: 20px;
-}
-.progress-bar-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-progress {
-  width: 80%;
-  height: 35px;
-  appearance: none;
-  border-radius: 10px;
-}
-progress::-webkit-progress-bar {
-  background-color: #ffffff; /* Light background color */
-  border-radius: 10px; /* Optional: For rounded corners */
-}
-progress::-webkit-progress-value {
-  background-color: #4c65af; /* Green color for the filled part */
-  border-radius: 10px; /* Optional: For rounded corners */
-}
-
-
-span {
-  font-size: 1rem;
-  color: #444;
-}
-
-.professional-skills {
-  flex: 1 1 45%;
-  margin-top: 40px;
-}
-
-.professional-skills h3 {
-  font-size: 2rem;
+.about-section {
+  background-color: #111111;
+  color: #f0f0f0;
+  min-height: 100vh;
+  padding: 40px 40px 40px 40px; /* left space for sidebar */
   width: 100%;
-  margin-bottom: 20px;
+  box-sizing: border-box;
 }
 
-
-.circle-skill {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 120px;
-  height: 120px;
+.about-title {
+  margin-left: 35px;
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  position: relative;
 }
 
-.circle-skills1 {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  padding-bottom: 50px;
-}
-
-
-
-.circle-skill label {
-  font-size: 1rem;
-  color: #444;
+.about-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #FF5722;
   margin-top: 10px;
 }
 
+.highlight {
+  color: #FF5722;
+  font-weight: bold;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  background: #1c1c1c;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-text {
+  font-size: 16px;
+  color: #dddddd;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background-color: #FF5722;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: 0.3s;
+  margin-bottom: 30px;
+}
+
+.resume-btn:hover {
+  background-color: #e64a19;
+}
+
+.fun-facts {
+  background: #222;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.fun-facts h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.fun-facts ul {
+  list-style: disc inside;
+  color: #cccccc;
+}
+
+.about-right {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 20px;
+  flex: 1;
+  min-width: 280px;
+}
+
+.tech-card {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.tech-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 87, 34, 0.3);
+}
+
+.tech-icon {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hire-me {
+  margin-left: 35px;
+  margin-top: 30px;
+}
+
+.hire-btn {
+  background-color: #FF5722;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.hire-btn:hover {
+  background-color: #e64a19;
+}
+
 @media (max-width: 768px) {
-  .about h2 {
-    font-size: 2rem;
+  .about-section {
+    padding: 60px 20px;
   }
 
-  .about p {
-    font-size: 1rem;
-  }
-
-  .skills-list {
-    max-width: 500px;
-    margin-bottom: 40px;
-  }
-
-  .progress-bars {
-    gap: 10px;
-  }
-
-  .circle-skills {
+  .about-container {
     flex-direction: column;
-    align-items: center;
   }
 
-  .circle-skill {
-    width: 100px;
-    height: 100px;
+  .about-right {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

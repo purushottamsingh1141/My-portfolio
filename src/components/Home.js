@@ -1,26 +1,31 @@
 import React from "react";
-import "./Home.css"; // Custom styling
-import profilePic from "./profile.jpg"; // Path to your profile picture
+import "./Home.css";
+import profilePic from "./pp.jpg"; // Make sure to place your image in src/assets/
 
 const Home = () => {
   return (
-    <section id="home" className="home">
-      <div className="home-content">
-        <img src={profilePic} alt="Purushottam Singh" className="profile-pic" />
-        <h2>Welcome to My Portfolio!</h2>
+    <section className="hero" id="home">
+      <div className="hero-text">
+        <h3>
+          Hello, my name is <span className="highlight">Purushottam Singh</span>
+        </h3>
+        <h1>
+          I’m a <span className="web-designer">Web Developer</span>
+          <span className="cursor">|</span>
+        </h1>
         <p>
-          Hi, I'm Purushottam Singh, a passionate web developer specializing in
-          Front-end technologies like HTML, CSS, JavaScript, and React. I'm
-          constantly learning and improving my skills.
+          I’m a web developer with experience in creating stylish, responsive
+          front-end projects. My expertise is in React, HTML, CSS, and
+          JavaScript.
         </p>
-        <div className="cta">
-          <a href="#contact" className="cta-button">
-            Contact Me
-          </a>
-          <a href="#projects" className="cta-button">
-            See My Projects
-          </a>
-        </div>
+        <a className="btn" href="#about">
+          More About Me
+        </a>
+      </div>
+      <div className="home-image-wrapper">
+        <img src={profilePic} alt="Profile" className="home-profile-img" />
+        <div className="corner top-left"></div>
+        <div className="corner bottom-right"></div>
       </div>
     </section>
   );

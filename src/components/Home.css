@@ -1,64 +1,118 @@
-.home {
-  background-color: #f0f4f8;
-  padding: 80px 20px;
-  text-align: center;
-  height: 100vh; /* Full screen height */
+.hero {
   display: flex;
-  flex-direction: column;
+  min-height: 100vh; /* Full screen height */
+  background-color: #111;
   align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
 }
 
-.home h2 {
-  font-size: 3rem;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-.home p {
-  font-size: 1.2rem;
-  color: #555;
+.hero-text {
   max-width: 600px;
-  margin-bottom: 30px;
+  flex: 1;
 }
 
-.cta {
-  display: flex;
-  justify-content: space-around;
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
 }
 
-.cta-button {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 20px;
+.web-designer {
+  color: #ff5722;
+}
+
+.cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.hero-text p {
+  color: #ccc;
+  margin: 1rem 0;
+}
+
+.btn {
+  background: #ff5722;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  color: #fff;
   text-decoration: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
+  font-weight: bold;
+  display: inline-block;
 }
 
-.profile-pic {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
+.home-image-wrapper {
+  position: relative;
+  width: 400px;
+  height: 450px;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.home-profile-img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  margin-bottom: 20px;
+  border-radius: 0 !important;
 }
 
 
-.cta-button:hover {
-  background-color: #0056b3;
+.corner {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 4px solid #ff5722;
+  z-index: 2;
 }
+
+.top-left {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+}
+.bottom-right {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+}
+
+.home-image-wrapper {
+  background: linear-gradient(135deg, #ff5722, #ff0099);
+  padding: 6px;
+}
+
+
+.home-image-wrapper:hover {
+  transform: scale(1.05);
+  transition: transform 1s ease;
+}
+
+
 
 @media (max-width: 768px) {
-  .home {
-    padding: 60px 20px;
+  .hero {
+    flex-direction: column;
+    text-align: center;
   }
 
-  .home h2 {
+  .hero-img img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .hero-text h1 {
     font-size: 2rem;
   }
 
-  .home p {
-    font-size: 1rem;
+  .btn {
+    margin-top: 1rem;
   }
 }

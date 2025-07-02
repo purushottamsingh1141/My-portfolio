@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import "./Contact.css";
+import {
+  FaPhoneAlt,
+  FaMapMarkerAlt,
+  FaEnvelope,
+  FaGlobe,
+} from "react-icons/fa";
 
 const Contact = () => {
-  // State to manage form input
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -11,29 +16,56 @@ const Contact = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+    setFormData({ ...formData, [name]: value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     alert("Thank you for reaching out!");
-    // Handle form submission logic here (e.g., send an email)
+    // Add form handling logic here
   };
 
   return (
-    <section id="contact" className="contact">
-      <h2>Contact Me</h2>
-      <p>
-        Feel free to reach out via the contact form or through my social media
-        links.
-      </p>
+    <section id="contact" className="contact-section">
+      <div className="contact-header">
+        <h2>Contact Me</h2>
+        <p>Have You Any Questions?</p>
+        <p>I'M AT YOUR SERVICE</p>
 
-      <div className="contact-container">
-        {/* Contact Form */}
-        <form onSubmit={handleSubmit} className="contact-form">
+        <div className="contact-grid">
+          <div className="contact-box">
+            <FaPhoneAlt />
+            <h4>Call Us On</h4>
+            <p>+91 7520192439</p>
+          </div>
+          <div className="contact-box">
+            <FaMapMarkerAlt />
+            <h4>Home</h4>
+            <p>Bihar, India</p>
+          </div>
+          <div className="contact-box">
+            <FaEnvelope />
+            <h4>Email</h4>
+            <p>purushottamsingh1141@gmail.com</p>
+          </div>
+          <div className="contact-box">
+            <FaGlobe />
+            <h4>Website</h4>
+            <a
+              href="http://my-portfolio-two-omega-66.vercel.app/"
+              style={{ color: "white", textDecoration: "none" }}
+            >
+              My Website
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div className="email-section">
+        <h3>SEND ME AN EMAIL</h3>
+        <p>I'M VERY RESPONSIVE TO MESSAGES</p>
+
+        <form className="contact-form" onSubmit={handleSubmit}>
           <input
             type="text"
             name="name"
@@ -59,30 +91,6 @@ const Contact = () => {
           ></textarea>
           <button type="submit">Send Message</button>
         </form>
-
-        {/* Social Media Links */}
-        <div className="social-links">
-          <a
-            href="https://www.instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
-              alt="Instagram"
-            />
-          </a>
-          <a
-            href="https://www.linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
-              alt="LinkedIn"
-            />
-          </a>
-        </div>
       </div>
     </section>
   );

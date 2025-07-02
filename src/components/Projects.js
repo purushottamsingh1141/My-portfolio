@@ -1,35 +1,37 @@
 import React from "react";
 import "./Projects.css";
-import cityRoadImage from "./city-road.jpg";
-import nineties from "./Nineties.jpg";
-import todolist from "./Todolist.jpg";
+import foodie from "./image/foodie.png";
+import movie from "./image/moviezone.png";
+import codebox from "./image/codebox.png";
+import food from "./image/food.png";
+import cityRoad from "./image/cityRoad.png";
 
 const projects = [
   {
-    title: "City Road",
-    description:
-      "A web application to explore city roads, featuring interactive maps and real-time data.",
-    technologies: "HTML, CSS, JavaScript, React",
-    link: "https://city-road.vercel.app/", // Replace with your actual project link
-    image: cityRoadImage, // Replace with an actual image URL of your project
+    title: "Foodie",
+    link: "https://foodie-singh.netlify.app",
+    image: foodie, //
   },
   {
-    title: "Nineties Art",
-    description:
-      "An animation showcase of 90s-themed art using HTML, CSS, and GSAP.",
-    technologies: "HTML, CSS, GSAP",
-    link: "https://nineties-art.vercel.app/", // Replace with your actual project link
-    image: nineties, // Replace with an actual image URL of your project
+    title: "Codebox",
+    link: "https://code-box-psi.vercel.app",
+    image: codebox,
   },
   {
-    title: "To-Do List",
-    description:
-      "A simple and interactive web application to manage tasks, with features to add, edit, etc..",
-    technologies: "HTML, CSS, JS, React",
-    link: "https://todo-react-tau-pied.vercel.app/", // Replace with your actual project link
-    image: todolist, // Replace with an actual image URL of your project
+    title: "CityRoad",
+    link: "https://city-road.vercel.app",
+    image: cityRoad,
   },
-  // Add more projects here
+  {
+    title: "MovieZone",
+    link: "https://moviezone-three.vercel.app/",
+    image: movie,
+  },
+  {
+    title: "Food Recipe",
+    link: "https://food-recipe-tau-lemon.vercel.app/",
+    image: food,
+  },
 ];
 
 const Projects = () => {

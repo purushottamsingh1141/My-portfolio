@@ -1,80 +1,82 @@
 .projects {
-  background-color: #f9f9f9;
-  padding: 60px 20px;
-  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #111;
+  color: #fff;
+  min-height: 100vh; /* Full screen height */
 }
 
 .projects h2 {
   font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 40px;
+  color: #fff;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.projects h2::before {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background-color: #ff5722;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
 }
 
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  justify-items: center;
+  grid-template-columns: repeat(2, minmax(359px, 1fr));
+  gap: 2rem;
 }
 
 .project-card {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #1c1c1c;
+  border-radius: 12px;
   overflow: hidden;
-  width: 100%;
-  max-width: 400px;
-  text-align: left;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
 }
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+
 
 .project-image {
   width: 100%;
-  height: auto;
+  
   object-fit: cover;
+  border-bottom: 2px solid #ff5722;
 }
 
 .project-details {
-  padding: 20px;
+  padding: 1rem;
 }
 
 .project-details h3 {
-  font-size: 1.5rem;
-  color: #333;
-  margin-bottom: 10px;
+  margin: 0.5rem 0;
+  color: #ff5722;
 }
 
 .project-details p {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 10px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  color: #ddd;
 }
 
 .project-link {
   display: inline-block;
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #2196f3;
-  color: white;
+  margin-top: 0.5rem;
+  color: #fff;
+  background-color: #ff5722;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
   text-decoration: none;
-  border-radius: 5px;
-  font-size: 1rem;
+  font-weight: bold;
   transition: background-color 0.3s ease;
 }
 
 .project-link:hover {
-  background-color: #1976d2;
-}
-
-@media (max-width: 768px) {
-  .projects-container {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .project-details h3 {
-    font-size: 1.2rem;
-  }
-
-  .project-details p {
-    font-size: 0.9rem;
-  }
+  background-color: #ff5722;
 }
