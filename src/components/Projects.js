@@ -14,7 +14,7 @@ const projects = [
   },
   {
     title: "Codebox",
-    link: "https://code-box-git-main-purushottam-singhs-projects.vercel.app/",
+    link: "https://code-box-nine.vercel.app/",
     image: codebox,
   },
   {
