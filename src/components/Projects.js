@@ -14,7 +14,7 @@ const projects = [
   },
   {
     title: "Codebox",
-    link: "https://code-box-psi.vercel.app",
+    link: "https://code-box-nine.vercel.app/",
     image: codebox,
   },
   {
