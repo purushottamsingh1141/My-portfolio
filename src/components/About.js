@@ -7,21 +7,35 @@ import {
   FaJava,
 } from "react-icons/fa";
 import { SiMongodb, SiBootstrap, SiJavascript } from "react-icons/si";
+import { motion } from "framer-motion"; // 👈 Import animation library
 import "./About.css";
 
 const About = () => {
   return (
     <section id="about" className="about-section">
-      <h2 className="about-title">About Me</h2>
+      <motion.h2
+        className="about-title"
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        About Me
+      </motion.h2>
 
       <div className="about-container">
-        <div className="about-left">
+        {/* Left side text */}
+        <motion.div
+          className="about-left"
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+        >
           <p className="about-text">
             Hi, I'm <span className="highlight">Purushottam</span>, a full-stack
             web developer with a strong background in building scalable and
             efficient web applications. I specialize in front-end and back-end
             development using technologies like React, Node.js, MongoDB, and
-            javaScript.
+            JavaScript.
           </p>
 
           <a href="/resume.pdf" download className="resume-btn">
@@ -41,9 +55,15 @@ const About = () => {
               </li>
             </ul>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="about-right">
+        {/* Right side tech cards */}
+        <motion.div
+          className="about-right"
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+        >
           <TechCard
             icon={<FaReact color="#61DBFB" size={100} />}
             name="React"
@@ -65,26 +85,38 @@ const About = () => {
             icon={<SiJavascript color="#F7DF1E" size={100} />}
             name="JavaScript"
           />
-        </div>
+        </motion.div>
       </div>
 
-      <div className="hire-me">
+      {/* Hire Me button */}
+      <motion.div
+        className="hire-me"
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8 }}
+      >
         <a href="mailto:purushottamsingh1141@gmail.com">
           <button type="button" className="hire-btn">
             <FaEnvelope /> Hire Me
           </button>
         </a>
-      </div>
+      </motion.div>
     </section>
   );
 };
 
+// Tech card animation
 const TechCard = ({ icon, name }) => {
   return (
-    <div className="tech-card">
+    <motion.div
+      className="tech-card"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+    >
       <div className="tech-icon">{icon}</div>
       <p>{name}</p>
-    </div>
+    </motion.div>
   );
 };
 

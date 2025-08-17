@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import "./Projects.css";
 import foodie from "./image/foodie.png";
 import movie from "./image/moviezone.png";
@@ -10,7 +11,7 @@ const projects = [
   {
     title: "Foodie",
     link: "https://foodie-singh.netlify.app",
-    image: foodie, //
+    image: foodie,
   },
   {
     title: "Codebox",
@@ -37,10 +38,26 @@ const projects = [
 const Projects = () => {
   return (
     <section id="projects" className="projects">
-      <h2>My Projects</h2>
+      {/* Section Title Animation */}
+      <motion.h2
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: false, amount: 0.2 }}
+      >
+        My Projects
+      </motion.h2>
+
       <div className="projects-container">
         {projects.map((project, index) => (
-          <div key={index} className="project-card">
+          <motion.div
+            key={index}
+            className="project-card"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.2 }}
+            viewport={{ once: false, amount: 0.2 }}
+          >
             <img
               src={project.image}
               alt={project.title}
@@ -48,10 +65,6 @@ const Projects = () => {
             />
             <div className="project-details">
               <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              <p>
-                <strong>Technologies Used:</strong> {project.technologies}
-              </p>
               <a
                 href={project.link}
                 target="_blank"
@@ -61,7 +74,7 @@ const Projects = () => {
                 View Project
               </a>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
