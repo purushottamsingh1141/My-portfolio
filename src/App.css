@@ -1,19 +1,7 @@
-
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #111;
-  color: #fff;
-}
-
-
-
-
 .container {
   display: flex;
   flex-direction: row;
 }
-
 
 main {
   flex: 1;
@@ -24,14 +12,12 @@ main {
 .section {
   min-height: 100vh;
   padding: 4rem 1rem;
-  scroll-margin-top: 70px; 
+  scroll-margin-top: 70px;
 }
-
 
 html {
   scroll-behavior: smooth;
 }
-
 
 @media (max-width: 768px) {
   .container {
@@ -40,10 +26,16 @@ html {
 
   main {
     padding: 1rem;
+    margin-left: 0; 
   }
 
   .section {
-    min-height: auto; 
+    min-height: auto;
     padding: 2rem 1rem;
+  }
+
+  .sidebar {
+    width: 100%;        
+    position: relative; 
   }
 }
